@@ -5,12 +5,11 @@ export async function load({ fetch, url }) {
 	const page = url.searchParams.get('page') || '1';
 	const client = rllc(VITE_APIKey);
 
-	const data = await client.launches({ page });
+	const data = await client.companies({ page: page });
 
 	return {
-		props: {
-			rawData: data,
-			launches: data.result
-		}
+		rawData: data,
+		companies: data.result,
+		currentPage: page
 	};
 }

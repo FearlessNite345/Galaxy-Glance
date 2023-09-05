@@ -4,9 +4,9 @@
 	export let launches;
 </script>
 
-<section>
-	<h3>Featured Launches</h3>
-	<div class="upcoming-launches">
+<section class="dark:text-white flex flex-col items-center justify-center">
+	<h3 class="text-2xl font-semibold">Featured Launches</h3>
+	<div class="container mx-auto p-4 grid grid-cols-3 gap-4">
 		{#each launches as launch}
 			<LaunchCard {launch} />
 		{/each}

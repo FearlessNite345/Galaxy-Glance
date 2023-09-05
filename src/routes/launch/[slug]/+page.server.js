@@ -7,8 +7,6 @@ export async function load({ fetch, params }) {
 	const data = await client.launches({ slug: params.slug });
 
 	return {
-		props: {
-			launch: data.result[0]
-		}
+		launch: data.result[0]
 	};
 }
